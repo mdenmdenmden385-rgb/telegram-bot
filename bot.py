@@ -78,7 +78,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.answer()
         await query.message.reply_text("🎬 الموسم الثالث:")
 
-        for msg_id in range(12, 16):
+        for msg_id in range(35, 45):
             await context.bot.copy_message(
                 chat_id=query.message.chat_id,
                 from_chat_id=CHANNEL_ID_2,
