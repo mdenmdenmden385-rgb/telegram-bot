@@ -87,7 +87,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
 
     # 🎬 الموسم الرابع
-    elif query.data == "season3":
+    elif query.data == "season4":
         await query.answer()
         await query.message.reply_text("🎬 الموسم الرابع:")
 
