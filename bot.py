@@ -19,7 +19,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 [InlineKeyboardButton("🎬 الموسم الأول", callback_data="season1")],
                 [InlineKeyboardButton("🎬 الموسم الثاني", callback_data="season2")],
                 [InlineKeyboardButton("🎬 الموسم الثالث", callback_data="season3")],
-                [InlineKeyboardButton("🎬 الموسم الرابع", callback_data="season3")],
+                [InlineKeyboardButton("🎬 الموسم الرابع", callback_data="season4")],
             ]
 
             await update.message.reply_text(
