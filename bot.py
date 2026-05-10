@@ -18,7 +18,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             keyboard = [
                 [InlineKeyboardButton("🎬 الموسم الأول", callback_data="season1")],
                 [InlineKeyboardButton("🎬 الموسم الثاني", callback_data="season2")],
-                [InlineKeyboardButton("🎬 الموسم الثالث", callback_data="season3")]
+                [InlineKeyboardButton("🎬 الموسم الثالث", callback_data="season3")],
+                [InlineKeyboardButton("🎬 الموسم الرابع", callback_data="season3")],
             ]
 
             await update.message.reply_text(
@@ -30,7 +31,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text(f"❌ لازم تشترك أولاً:\nhttps://t.me/series6781")
 
     except:
-        await update.message.reply_text("series6781  ❌ اشترك بالقناة أولاً")
+        await update.message.reply_text("\nhttps://t.me/series6781  ❌ اشترك بالقناة أولاً")
 
 
 # 🔹 إرسال رسائل من القناة مباشرة
@@ -79,6 +80,18 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.message.reply_text("🎬 الموسم الثالث:")
 
         for msg_id in range(35, 45):
+            await context.bot.copy_message(
+                chat_id=query.message.chat_id,
+                from_chat_id=CHANNEL_ID_2,
+                message_id=msg_id
+            )
+
+    # 🎬 الموسم الرابع
+    elif query.data == "season3":
+        await query.answer()
+        await query.message.reply_text("🎬 الموسم الرابع:")
+
+        for msg_id in range(45, 55):
             await context.bot.copy_message(
                 chat_id=query.message.chat_id,
                 from_chat_id=CHANNEL_ID_2,
